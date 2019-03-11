@@ -12,3 +12,5 @@ F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.csprojAssemblyR
 F:\STUFF\NoteAPI\NoteAPI\NoteAPI\bin\Debug\netcoreapp2.1\NoteAPI.pdb
 F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.dll
 F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.pdb
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\bin\Debug\netcoreapp2.1\NoteAPI.xml
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.xml
