@@ -1,0 +1,14 @@
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\bin\Debug\netcoreapp2.1\NoteAPI.deps.json
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\bin\Debug\netcoreapp2.1\NoteAPI.runtimeconfig.json
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\bin\Debug\netcoreapp2.1\NoteAPI.runtimeconfig.dev.json
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\bin\Debug\netcoreapp2.1\NoteAPI.dll
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.csproj.CoreCompileInputs.cache
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.RazorAssemblyInfo.cache
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.RazorAssemblyInfo.cs
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.AssemblyInfoInputs.cache
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.AssemblyInfo.cs
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.RazorTargetAssemblyInfo.cache
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.csprojAssemblyReference.cache
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\bin\Debug\netcoreapp2.1\NoteAPI.pdb
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.dll
+F:\STUFF\NoteAPI\NoteAPI\NoteAPI\obj\Debug\netcoreapp2.1\NoteAPI.pdb
