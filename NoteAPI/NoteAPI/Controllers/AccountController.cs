@@ -67,7 +67,10 @@ namespace NoteAPI.Controllers
 			{
 				if (token != Guid.Empty)
 				{
-					this.dbContext.Update(user);
+					User actualUser = this.dbContext.Users.Where(u => u.ID == this.tokenService.GetUserByToken(token).ID).SingleOrDefault();
+					actualUser.FirstName = user.FirstName;
+					actualUser.SecondName = user.SecondName;
+					this.dbContext.Users.Update(actualUser);
 					this.dbContext.SaveChanges();
 					return Ok();
 				}
@@ -86,7 +89,9 @@ namespace NoteAPI.Controllers
 
 			if (!string.IsNullOrEmpty(user.Password))
 			{
-				this.dbContext.Update(user);
+				User actualUser = this.dbContext.Users.Where(u => u.ID == this.tokenService.GetUserByToken(token).ID).SingleOrDefault();
+				actualUser.Password = user.Password;
+				this.dbContext.Users.Update(actualUser);
 				this.dbContext.SaveChanges();
 				return Ok();
 			}
@@ -101,12 +106,6 @@ namespace NoteAPI.Controllers
 			if (!tokenService.TryGetToken(this.HttpContext, out Guid token))
 				return Unauthorized();
 			return this.dbContext.Users.Where(e => e.ID == this.tokenService.GetUserByToken(token).ID).SingleOrDefault();
-		}
-
-		public class LogInDate
-		{
-			public string Email { get; set; }
-			public string Password { get; set; }
 		}
 	}
 }

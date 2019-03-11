@@ -13,6 +13,7 @@ namespace NoteAPI.Controllers
     [ApiController]
     public class NotesController : ControllerBase
     {
+		private const int PAGE_SIZE = 10;
 		private NoteAPIContext dbCOntext;
 		private TokenService tokenService;
 
@@ -66,16 +67,38 @@ namespace NoteAPI.Controllers
 			return BadRequest();
         }
 
-        // PUT: api/notes/5
+        // PUT: api/notes/5?token=XXX
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] Note note)
         {
+			if (this.tokenService.TryGetToken(this.HttpContext, out Guid token))
+			{
+				int userID = this.tokenService.GetUserByToken(token).ID;
+				Note actualNote = this.dbCOntext.Notes.Where(n => n.UserID == userID && n.ID == id).SingleOrDefault();
+				actualNote.Content = note.Content;
+				actualNote.Name = note.Name;
+				this.dbCOntext.Notes.Update(actualNote);
+				this.dbCOntext.SaveChanges();
+				return Ok();
+			}
+
+			return BadRequest();
         }
 
-        // DELETE: api/ApiWithActions/5
+        // DELETE: api/notes/5?token=XXX
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+			if (this.tokenService.TryGetToken(this.HttpContext, out Guid token))
+			{
+				int userID = this.tokenService.GetUserByToken(token).ID;
+				Note noteToRemove = this.dbCOntext.Notes.Where(n => n.UserID == userID && n.ID == id).SingleOrDefault();
+				this.dbCOntext.Notes.Remove(noteToRemove);
+				this.dbCOntext.SaveChanges();
+				return Ok();
+			}
+
+			return BadRequest();
         }
     }
 }
